@@ -1,0 +1,14 @@
+PROCEDURE insertion-sort(VAR array: ARRAY_OF INTEGER )
+VAR
+i,j,current: INTEGER;
+BEGIN
+    FOR i FROM 1 TO array.length-1 DO
+        current := array[i]
+        j:=i-1 
+        WHILE (j>0 AND array[j]> current) DO
+        array [j+1]:= array [j]
+        j:= j-1
+    END_WHILE
+    array[j+1] := current
+    END_FOR
+    END
